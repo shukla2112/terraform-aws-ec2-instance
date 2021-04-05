@@ -102,4 +102,8 @@ resource "aws_instance" "this" {
   credit_specification {
     cpu_credits = local.is_t_instance_type ? var.cpu_credits : null
   }
+
+  lifecycle {
+    ignore_changes = var.ignore_changes
+  }
 }

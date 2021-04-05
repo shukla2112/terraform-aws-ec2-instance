@@ -104,6 +104,9 @@ resource "aws_instance" "this" {
   }
 
   lifecycle {
-    ignore_changes = var.ignore_changes
+    ignore_changes = [
+      user_data,
+      user_data_base64,
+    ]
   }
 }

@@ -198,9 +198,3 @@ variable "num_suffix_format" {
   type        = string
   default     = "-%d"
 }
-
-variable "ec2_ignore_changes" {
-  description = "Ignore the changes during  the resource plan"
-  type        = list(string)
-  default     = []
-}
